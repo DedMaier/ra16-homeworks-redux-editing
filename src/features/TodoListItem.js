@@ -1,16 +1,15 @@
-import {useDispatch} from "react-redux";
-import {todoRemoved, todoEdit} from '../components/badges'
+import { useDispatch } from "react-redux";
+import { todoRemoved, todoEdit } from '../components/badges'
 
-export default function TodoListItem({todo}) {
+export default function TodoListItem({ todo }) {
     const dispatch = useDispatch();
 
-
     const removedClick = () => {
-        dispatch(todoRemoved({id: todo.id}))
+        dispatch(todoRemoved({ id: todo.id }))
     }
 
     const editClick = () => {
-        dispatch(todoEdit({id: todo.id}))
+        dispatch(todoEdit({ id: todo.id }))
     }
 
     return (

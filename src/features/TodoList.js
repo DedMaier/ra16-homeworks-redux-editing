@@ -1,4 +1,4 @@
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 import TodoListItem from "./TodoListItem";
 
 
@@ -9,10 +9,10 @@ export default function TodoList() {
     // eslint-disable-next-line array-callback-return
     const renderedListItems = todos.map((todo) => {
         if (filter === '') {
-            return <TodoListItem key={todo.id} todo={todo}/>
+            return <TodoListItem key={todo.id} todo={todo} />
         }
         if (todo.text.toLowerCase().includes(filter.toLowerCase())) {
-            return <TodoListItem key={todo.id} todo={todo}/>
+            return <TodoListItem key={todo.id} todo={todo} />
         }
     })
 
